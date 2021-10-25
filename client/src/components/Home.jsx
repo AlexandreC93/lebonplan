@@ -8,7 +8,7 @@ export default function Home() {
         <div>
             <h1>Le Bon Plan</h1>
             <NavBar />
-            <img src={carteFrance}></img>
+            <img src={carteFrance} className="img"></img>
         </div>
     )
 }
