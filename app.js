@@ -1,21 +1,18 @@
 
 const express = require('express');
 const path = require('path');
-const usersRouter = require('./routes/users.routes');
-const productRouter = require("./routes/product.routes")
+const usersRouter = require('./routes/users.routes.js');
+const productRouter = require("./routes/product.routes.js")
 const app = express();
 
-// view engine setup
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'jade');
-
 app.use(logger('dev'));
+app.use(cors())
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Creation des routes voir la suite  dans le dossier routes/fichiers Users.js 
+// EN 1er Creation des routes voir la suite dans le dossier routes/fichiers Users.js 
 app.use('/product', productRouter);
 app.use('/users', usersRouter);
 
@@ -25,6 +22,7 @@ app.use('/users', usersRouter);
 app.use(function(req, res, next) {
   next(createError(404));
 });
+
 
 // error handler
 app.use(function(err, req, res, next) {
