@@ -5,11 +5,14 @@ import carteFrance from '../img/carte-france.jpg'
 
 export default function Home() {
     return (
-        <div>
+        <div id="home">
 
-            <h1>Le Bon Plan</h1>
             <NavBar />
-            <img src={carteFrance} alt="carte-de-france"/>
+            <div id="head-home">
+            <h1 className="title">Le Bon Plan</h1>
+            <img className="map" src={carteFrance} alt="carte-de-france"/>
+            </div>
+
         </div>
     )
 }
