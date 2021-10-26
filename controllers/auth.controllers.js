@@ -31,7 +31,7 @@ module.exports.signIn = async (req, res) => {
     const { email, password } = req.body
     module.exports.signIn = async (req, res) => {
         try {
-            const user = await UserModel.login(email, password);
+            const user = await serModel.login(email, password);
             const token = createToken(user._id);
             // res.cookie tu me garde dans cookiie les email et identifant il va rester activer que sur le serveur
             res.cookie('jwt', token, { httpOnly: true, maxAge });

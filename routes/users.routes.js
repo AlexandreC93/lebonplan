@@ -11,7 +11,7 @@ router.post("/register", authController.signUp);
 router.post("/login", authController.signIn);
 
 // Creation de route pour se deconnecter  VOIR DOSSIER contollers/auth.controllers.js
-// router.get("/logout", authController.logout);
+router.get("/logout", authController.logout);
 
 
 module.exports = router;
