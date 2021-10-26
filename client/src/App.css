@@ -57,3 +57,23 @@ button{
   background-color:orangered;
   text-align: start;
 }
+
+#head-home{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+#search{
+  display: flex;
+  flex-flow: row;
+  border: solid 1px black;
+  padding: 15px;
+  justify-content: center;
+  
+}
+
+#searchbar{
+  width: 300px;
+  border-radius: 20px;
+}
