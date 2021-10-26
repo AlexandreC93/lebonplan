@@ -1,11 +1,11 @@
 import React from 'react'
 
-export default function Form({register}) {
+export default function Form({register, fetch}) {
     return (
         <div id="form">
             <h1>Form</h1>
             {register ?
-                <form action="">
+                <form onSubmit={fetch}>
                     <div id="input-form">
                         <input type="text" className="input" name="firstName" placeholder="First Name..." />
                         <input type="text" className="input" name="lastName" placeholder="Last Name..." />
@@ -18,14 +18,14 @@ export default function Form({register}) {
                     </div>
                 </form>
                 :
-                <form action="">
-                    <h1>login</h1>
-                    <form action="" >
+                
+                <form onSubmit={fetch}>
+                        <h1>login</h1>
                         <input className="input" type="text" name="surname" placeholder="Surname..."/>
                         <input className="input" type="password" name="password" placeholder="Password"/>
                         <input className="input" type="submit" value="Login" />
                     </form>
-                </form>
+                
             }
         </div>
     )
