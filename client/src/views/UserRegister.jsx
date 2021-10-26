@@ -23,8 +23,9 @@ export default function UserRegister() {
             <Form register={true} fetch={(e) => {
                 e.preventDefault()
                 fetch("http://localhost:4000/users/register", requestOptions)
-                .then(console.log)
+                .then(res=> res.json())
                 .then(result => setData(result))
+            
 
             }} />
         </div>

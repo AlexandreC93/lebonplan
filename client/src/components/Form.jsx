@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Form({register, fetch}) {
+export default function Form({ register, fetch }) {
     return (
         <div id="form">
             <h1>Form</h1>
@@ -18,14 +18,14 @@ export default function Form({register, fetch}) {
                     </div>
                 </form>
                 :
-                
+
                 <form onSubmit={fetch}>
-                        <h1>login</h1>
-                        <input className="input" type="text" name="surname" placeholder="Surname..."/>
-                        <input className="input" type="password" name="password" placeholder="Password"/>
-                        <input className="input" type="submit" value="Login" />
-                    </form>
-                
+                    <h1>login</h1>
+                    <input className="input" type="text" name="surname" placeholder="Surname..." />
+                    <input className="input" type="password" name="password" placeholder="Password" />
+                    <input className="input" type="submit" value="Login" />
+                </form>
+
             }
         </div>
     )
