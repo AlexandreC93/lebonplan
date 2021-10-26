@@ -4,6 +4,7 @@ const path = require('path');
 const cors = require('cors');
 const usersRouter = require('./routes/users.routes.js');
 const productRouter = require("./routes/product.routes.js")
+const indexRouter = require('./routes/index.routes')
 const app = express();
 
 app.use(cors())
@@ -17,6 +18,7 @@ app.set('view engine', "html");
 // EN 1er Creation des routes voir la suite dans le dossier routes/fichiers Users.js 
 app.use('/product', productRouter);
 app.use('/users', usersRouter);
+app.use('/', indexRouter)
 
 
 
@@ -34,7 +36,7 @@ app.use(function (err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  res.send('error');
 });
 
 

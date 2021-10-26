@@ -44,7 +44,8 @@ module.exports.signIn = async (req, res) => {
     }
 }
 // 4 Se deconnecter
-module.exports.logout = (req, res) => {
+module.exports.logout = async (req, res) => {
+    // res.send('redirection')
     // maxAge a 1 milliseconde va disparaitre quand il va se deconnecter 
     res.cookie('jwt', '', { maxAge: 1 });
     // et il sera rediriger la page home grace a redirect
