@@ -10,7 +10,7 @@ export default function Home() {
             <NavBar />
             <div id="head-home">
             <h1 className="title">Le Bon Plan</h1>
-            <img className="map" src={carteFrance} alt="carte-de-france"/>
+            {/* <img className="map" src={carteFrance} alt="carte-de-france"/> */}
             </div>
 
         </div>
