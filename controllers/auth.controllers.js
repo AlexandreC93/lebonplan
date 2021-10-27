@@ -14,14 +14,15 @@ const createToken = (id) => {
 
 // 2 s'inscrire // Quand tu es sur la page S'INSCRIRE tu m'affiche firstname lastname...
 module.exports.signUp = async (req, res) => {
+    console.log(req.body)
     const { firstName, lastName, surname, email, password } = req.body
     try {
-        const user = userModel.create({ firstName, lastName, surname, email, password })
-        res.status(202).json( user )
-        console.log("youhou")
+        const user = await userModel.create([{ firstName, lastName, surname, email, password }])
+        res.status(202).json({user})
+        console.log(req.body, "req.body")
     }
     catch (err) {
-        console.log("erreur")
+        console.log(err)
         res.status(500).json({ err })
     }
 }

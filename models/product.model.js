@@ -3,7 +3,14 @@ const mongoose = require('mongoose');
 
   const productSchema = new Schema({
     
-    title: String,
+    title:{
+      type: String,
+      required: true,
+      trim: true,
+      minlength: 3,
+      
+
+    } ,
     price: String,
     image: String,
     city: String,

@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function NavBar() {
     return (
@@ -6,12 +7,26 @@ export default function NavBar() {
 
 
             <nav>
-                <button>
-                    <h3>Home</h3>
-                </button>
-                <button>
-                    <h3> Cities</h3>
-                </button>
+                <Link to="/">
+                    <button>
+                        <h3>Home</h3>
+                    </button>
+                </Link>
+                <Link to="/products">
+                    <button>
+                        <h3> Product</h3>
+                    </button>
+                </Link>
+                <Link to="/users/register">
+                    <button>
+                        <h3> Register</h3>
+                    </button>
+                </Link>
+                <Link to="/product/admin">
+                    <button>
+                        <h3> Admin product</h3>
+                    </button>
+                </Link>
 
             </nav>
         </div>
