@@ -23,6 +23,11 @@ body{
   align-items: center;
 }
 
+#product-form{
+  display: flex;
+  flex-flow: column;
+}
+
 .input{
   width: 60vw;
   margin: 10px;
@@ -76,4 +81,9 @@ button{
 #searchbar{
   width: 300px;
   border-radius: 20px;
+}
+
+
+path {
+  fill: black;
 }
