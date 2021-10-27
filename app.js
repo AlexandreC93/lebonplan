@@ -1,4 +1,3 @@
-
 const express = require('express');
 const path = require('path');
 const cors = require('cors');
@@ -6,7 +5,7 @@ const usersRouter = require('./routes/users.routes.js');
 const productRouter = require("./routes/product.routes.js")
 const indexRouter = require('./routes/index.routes')
 const app = express();
-
+app.use(cookieParser());
 app.use(cors())
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -44,8 +43,6 @@ app.use(function (err, req, res, next) {
 // app.listen(4000, () => {
 //   console.log("Listening on port" + 4000 );
 // })
-
-
 
 
 module.exports = app;
