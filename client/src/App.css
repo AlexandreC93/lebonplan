@@ -83,7 +83,11 @@ button{
   border-radius: 20px;
 }
 
-
-path {
+path{
   fill: black;
+stroke: lightgreen;
+}
+
+path:hover{
+  fill: lightgray;
 }

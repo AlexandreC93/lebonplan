@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import NavBar from './NavBar'
 
 export default function ProductForm() {
 
@@ -41,6 +42,7 @@ export default function ProductForm() {
 
     return (
         <div id="product-form">
+            <NavBar/>
 
             <form onSubmit={(e) => {
                 e.preventDefault()

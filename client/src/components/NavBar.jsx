@@ -12,7 +12,7 @@ export default function NavBar() {
                         <h3>Home</h3>
                     </button>
                 </Link>
-                <Link to="/products">
+                <Link to="/product">
                     <button>
                         <h3> Product</h3>
                     </button>

@@ -3,6 +3,7 @@ import React from 'react'
 export default function Product() {
     return (
         <div id="product">
+            
             <img src="" alt="" />
             <div id="info">
                 <h2>Product name</h2>
