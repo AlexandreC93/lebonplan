@@ -1,29 +1,22 @@
 import React from 'react'
 
 export default function NavBar() {
+    
     return (
-        // <nav>
-        //     <ul className="list">
-        //         <h3>Home </h3>
-        //         <h3>
-        //             <ul>
-        //                 <li>Paris</li>
-        //                 <li>Lyon</li>
-        //                 <li>Marseille</li>
-        //             </ul>
-        //         </h3>
-
-        //     </ul>
-
-        // </nav>
-        <nav>
-            <button>
-                <h3>Home</h3>
-            </button>
-            <button>
-                <h3> Cities</h3>
-            </button>
-
-        </nav>
+        <div>
+            <nav>
+                <div class="hamburger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Cities</a></li>
+                    <li><button class="login-button" href="#">Login</button></li>
+                    <li><button class="register-button" href="#">Register</button></li>
+                </ul>
+            </nav>
+        </div>
     )
 }
