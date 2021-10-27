@@ -1,20 +1,18 @@
-nav{
-  height: 50px;;
-  background: blueviolet;
-  display:flex;
-  align-items: center;
-  justify-content: center;
-}
+
 
 /* Form */
-
-body{
-  background-color: blueviolet;
-}
 
 #form{
   display: flex;
   flex-flow: column;
+}
+
+.title{
+  color: white;
+}
+
+body{
+  background-color: black;
 }
 
 #input-form{
@@ -47,7 +45,7 @@ body{
 
 nav{
   height: 50px;;
-  background: orangered;
+  background: rgb(128, 27, 141);
   display:flex;
   align-items: center;
   justify-content: center;
@@ -59,7 +57,7 @@ nav{
 }
 
 button{
-  background-color:orangered;
+  background-color:rgb(128, 27, 141);
   text-align: start;
 }
 
@@ -84,8 +82,8 @@ button{
 }
 
 path{
-  fill: black;
-stroke: lightgreen;
+  fill: rgb(128, 27, 141);
+stroke: white;
 }
 
 path:hover{
