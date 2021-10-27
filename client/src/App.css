@@ -54,6 +54,7 @@ nav{
 button{
   background-color:orangered;
   text-align: start;
+  height: 20px;
 }
 
 #head-home{
@@ -72,7 +73,7 @@ button{
 }
 
 #searchbar{
-  width: 300px;
+  width: 250px;
   border-radius: 20px;
 }
 
