@@ -1,21 +1,32 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function NavBar() {
     
     return (
         <div>
             <nav>
-                <div class="hamburger">
-                    <div class="line1"></div>
-                    <div class="line2"></div>
-                    <div class="line3"></div>
-                </div>
-                <ul class="nav-links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Cities</a></li>
-                    <li><button class="login-button" href="#">Login</button></li>
-                    <li><button class="register-button" href="#">Register</button></li>
-                </ul>
+                <Link to="/">
+                    <button>
+                        <h3>Home</h3>
+                    </button>
+                </Link>
+                <Link to="/products">
+                    <button>
+                        <h3> Product</h3>
+                    </button>
+                </Link>
+                <Link to="/users/register">
+                    <button>
+                        <h3> Register</h3>
+                    </button>
+                </Link>
+                <Link to="/product/admin">
+                    <button>
+                        <h3> Admin product</h3>
+                    </button>
+                </Link>
+
             </nav>
         </div>
     )

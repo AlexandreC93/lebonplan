@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Switch, Link, Route } from 'react-router-dom'
 import User from './views/User';
 import ProductsList from './views/ProductsList';
 import Search from './views/Search';
-import FranceCarte from './components/FranceCarte';
+import ProductForm from './components/ProductForm';
 
 function App() {
   return (
@@ -19,8 +19,9 @@ function App() {
         <Route exact path="/"> <Home /> </Route>
         <Route exact path="/users"> <User /> </Route>
         <Route path="/users/register"> <UserRegister /> </Route>
-        <Route path="/products"> <ProductsList/> </Route>
+        <Route exact path="/product"> <ProductsList/> </Route>
         <Route path="/search"> <Search/> </Route>
+        <Route path="/product/admin"> <ProductForm/> </Route>
       </Switch>
 
     </Router>
