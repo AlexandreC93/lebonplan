@@ -7,6 +7,7 @@ import User from './views/User';
 import ProductsList from './views/ProductsList';
 import Search from './views/Search';
 import ProductForm from './components/ProductForm';
+import Error from './views/Error';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route exact path="/product"> <ProductsList/> </Route>
         <Route path="/search"> <Search/> </Route>
         <Route path="/product/admin"> <ProductForm/> </Route>
+        <Route path="/error"> <Error/> </Route>
       </Switch>
 
     </Router>

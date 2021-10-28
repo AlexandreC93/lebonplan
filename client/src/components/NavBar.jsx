@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import SearchBar from './SearchBar'
 
 export default function NavBar() {
     return (
@@ -8,26 +9,26 @@ export default function NavBar() {
 
             <nav>
                 <Link to="/">
-                    <button>
+                    <a href="">
                         <h3>Home</h3>
-                    </button>
+                    </a>
                 </Link>
                 <Link to="/product">
-                    <button>
+                    <a href="">
                         <h3> Product</h3>
-                    </button>
+                    </a>
                 </Link>
                 <Link to="/users/register">
-                    <button>
+                    <a href="">
                         <h3> Register</h3>
-                    </button>
+                    </a>
                 </Link>
                 <Link to="/product/admin">
-                    <button>
+                    <a href="">
                         <h3> Admin product</h3>
-                    </button>
+                    </a>
                 </Link>
-
+        <SearchBar/>
             </nav>
         </div>
     )

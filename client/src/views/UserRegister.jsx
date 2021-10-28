@@ -32,11 +32,11 @@ export default function UserRegister() {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-            firstName: firstName,
-            lastName: lastName,
-            surname: surname,
-            email: email,
-            password: password
+            firstName,
+            lastName,
+            surname,
+            email,
+            password
         })
     }
 
