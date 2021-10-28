@@ -30,11 +30,11 @@ module.exports.id = async (req, res, next) => {
 }
 
 module.exports.admin = async (req, res, next) =>{
-    const {title, price, description, image, infos} = req.body
+    const {title, price, description, image, cities} = req.body
     try{
-        const product = await productModel.create([{title, price, description, image, infos}])
-        res.status(202).json({product})
         console.log("BODY >>>>>>>", req.body )
+        const product = await productModel.create([{title, price, description, image, cities}])
+        res.status(202).json({product})
     }
 
     catch (err){

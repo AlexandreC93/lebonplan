@@ -8,7 +8,7 @@ export default function ProductForm() {
     const [price, setPrice] = useState(0)
     const [description, setDescri] = useState("")
     const [image, setImage] = useState("")
-    const [infos, setInfos] = useState("")
+    const [cities, setCities] = useState("")
 
     const handleTitle = (e) => {
         setTitle(e.target.value)
@@ -22,8 +22,8 @@ export default function ProductForm() {
     const handleImage = (e) => {
         setImage(e.target.value)
     }
-    const handleInfos = (e) => {
-        setInfos(e.target.value)
+    const handleCities = (e) => {
+        setCities(e.target.value)
     }
 
 
@@ -37,58 +37,61 @@ export default function ProductForm() {
             price,
             description,
             image,
-            infos
+            cities
         })
     }
 
     return (
         <>
-            <NavBar/>
+            <NavBar />
             <div id="content">
-        <div id="product-form">
+                <div id="product-form">
 
-            <form onSubmit={(e) => {
-                e.preventDefault()
-                fetch('http://localhost:4000/product/admin', requestOptions)
-                    .then(res => {
-                        console.log(res);
-                        res.json()
-                    })
-            }}>
-                <div id='input-form'>
+                    <form onSubmit={(e) => {
+                        e.preventDefault()
+                        fetch('http://localhost:4000/product/admin', requestOptions)
+                            .then(res => {
+                                console.log(res);
+                                res.json()
+                            })
+                    }}>
+                        <div id='input-form'>
 
-<p className="text-form">Enter the product title</p>
+                            <p className="text-form">Enter the product title</p>
 
-                    <input type="text" name="title" className="input" value={title}
-                        placeholder="Product title..." onChange={handleTitle}  />
+                            <input type="text" name="title" className="input" value={title}
+                                placeholder="Product title..." onChange={handleTitle} />
 
-<p className="text-form">Enter your price</p>
+                            <p className="text-form">Enter your price</p>
 
-                    <input type="number" name="price" className="input" value={price}
-                        placeholder="Price..." onChange={handlePrice} />
+                            <input type="number" name="price" className="input" value={price}
+                                placeholder="Price..." onChange={handlePrice} />
 
-<p className="text-form">Enter a description</p>
+                            <p className="text-form">Enter a description</p>
 
-                    <input type="text" name="description" className="input" value={description}
-                        placeholder="Description..." onChange={handleDescri} />
+                            <input type="text" name="description" className="input" value={description}
+                                placeholder="Description..." onChange={handleDescri} />
 
-<p className="text-form">Upload images</p>
+                            <p className="text-form">Upload images</p>
 
-                    <input type="upload" name="image" className="input" value={image}
-                        placeholder="Upload files..." onChange={handleImage} />
-
-<p className="text-form">Enter your infos</p>
+                            <input type="upload" name="image" className="input" value={image}
+                                placeholder="Upload files..." onChange={handleImage} />
 
 
-                    <input type="text" name="infos" className="input" value={infos}
-                        placeholder="Infos..." onChange={handleInfos} />
+                            <label htmlFor="cities" className="input title">Select your city
+                                <select name="cities" className="input">
+                                    <option value="Paris">Paris</option>
+                                    <option value="Lyon">Lyon</option>
+                                    <option value="Marseille">Marseille</option>
+                                </select>
+                            </label>
 
-                    <input className="product-submit" type="submit" value="Submit product" />
+                            <input className="product-submit" type="submit" value="Submit product" />
+                        </div>
+                    </form>
                 </div>
-            </form>
-        </div>
-        </div>
-        <Footer/>
+            </div>
+            <Footer />
         </>
     )
 }

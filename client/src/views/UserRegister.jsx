@@ -65,6 +65,7 @@ export default function UserRegister() {
                             res.json()
                             console.log(firstName);
                         })
+                        // .then()
 
 
                 }} />
