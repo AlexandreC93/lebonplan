@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Footer from '../components/Footer'
 import Form from '../components/Form'
 import NavBar from '../components/NavBar'
 
@@ -42,9 +43,10 @@ export default function UserRegister() {
 
     console.log(firstName);
     return (
-        <div id="user">
+        <>
             <NavBar />
-            <h1>User Register</h1>
+        <div id="user-register">
+            <h1 className="register-title">User Register</h1>
 
             <Form register={true}
 
@@ -67,5 +69,7 @@ export default function UserRegister() {
 
                 }} />
         </div>
+                <Footer/>
+        </>
     )
 }

@@ -8,7 +8,7 @@ export default function Product({image, alt}) {
 
             <div id="info">
                 <h2 className="title-product" >Product name</h2>
-                <span className="price" className="price">Price</span>
+                <span className="price" className="price">Price €</span>
                 {/*user*/}
                 {/*info*/}
                 <p className="descri-product">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga ipsum expedita recusandae facilis ad. Dolorem ipsa excepturi rem tenetur deserunt?</p>

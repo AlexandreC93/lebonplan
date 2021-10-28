@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Switch, Link, Route } from 'react-router-dom'
 import User from './views/User';
 import ProductsList from './views/ProductsList';
 import Search from './views/Search';
-import ProductForm from './components/ProductForm';
+import ProductForm from './views/ProductForm';
 import Error from './views/Error';
 
 function App() {

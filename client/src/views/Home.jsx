@@ -2,6 +2,7 @@ import React from 'react'
 import NavBar from '../components/NavBar'
 // import carteFrance from '../img/carte-france.jpg'
 import Map from '../components/Map'
+import Footer from '../components/Footer'
 
 export default function Home() {
     return (
@@ -13,7 +14,7 @@ export default function Home() {
             {/* <img className="map" src={carteFrance} alt="carte-de-france"/> */}
             <Map/>
             </div>
-
+<Footer/>
         </div>
     )
 }
