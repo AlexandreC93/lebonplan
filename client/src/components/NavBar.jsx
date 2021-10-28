@@ -30,7 +30,7 @@ export default function NavBar() {
                 </Link>
                 <Link to="/product/admin">
                     <a href="">
-                        <h3> Admin product</h3>
+                        <h3> Post product</h3>
                     </a>
                 </Link>
         <SearchBar/>
