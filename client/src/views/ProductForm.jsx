@@ -43,52 +43,51 @@ export default function ProductForm() {
 
     return (
         <>
-            <NavBar/>
+            <NavBar />
             <div id="content">
-        <div id="product-form">
+                <div id="product-form">
 
-            <form onSubmit={(e) => {
-                e.preventDefault()
-                fetch('http://localhost:4000/product/admin', requestOptions)
-                    .then(res => {
-                        console.log(res);
-                        res.json()
-                    })
-            }}>
-                <div id='input-form'>
+                    <form onSubmit={(e) => {
+                        e.preventDefault()
+                        fetch('http://localhost:4000/product/admin', requestOptions)
+                            .then(res => {
+                                console.log(res);
+                                res.json()
+                            })
+                    }}>
+                        <div id='input-form'>
 
-<p className="text-form">Enter the product title</p>
+                            <p className="text-form">Enter the product title</p>
 
-                    <input type="text" name="title" className="input" value={title}
-                        placeholder="Product title..." onChange={handleTitle}  />
+                            <input type="text" name="title" className="input" value={title}
+                                placeholder="Product title..." onChange={handleTitle} />
 
-<p className="text-form">Enter your price</p>
+                            <p className="text-form">Enter your price</p>
 
-                    <input type="number" name="price" className="input" value={price}
-                        placeholder="Price..." onChange={handlePrice} />
+                            <input type="number" name="price" className="input" value={price}
+                                placeholder="Price..." onChange={handlePrice} />
 
-<p className="text-form">Enter a description</p>
+                            <p className="text-form">Enter a description</p>
 
-                    <input type="text" name="description" className="input" value={description}
-                        placeholder="Description..." onChange={handleDescri} />
+                            <input type="text" name="description" className="input" value={description}
+                                placeholder="Description..." onChange={handleDescri} />
 
-<p className="text-form">Upload images</p>
+                            <p className="text-form">Upload images</p>
 
-                    <input type="upload" name="image" className="input" value={image}
-                        placeholder="Upload files..." onChange={handleImage} />
+                            <input type="upload" name="image" className="input" value={image}
+                                placeholder="Upload files..." onChange={handleImage} />
 
-<p className="text-form">Enter your infos</p>
+                            <p className="text-form">Enter your infos</p>
 
+                            <input type="text" name="infos" className="input" value={infos}
+                                placeholder="Infos..." onChange={handleInfos} />
 
-                    <input type="text" name="infos" className="input" value={infos}
-                        placeholder="Infos..." onChange={handleInfos} />
-
-                    <input className="product-submit" type="submit" value="Submit product" />
+                            <input className="product-submit" type="submit" value="Submit product" />
+                        </div>
+                    </form>
                 </div>
-            </form>
-        </div>
-        </div>
-        <Footer/>
+            </div>
+            <Footer />
         </>
     )
 }

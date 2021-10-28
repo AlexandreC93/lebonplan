@@ -9,6 +9,7 @@ const storage = multer.diskStorage({
     },
     filename: function (req, file, cb) {
         const date = new Date();
+        const username = req.params.username
         cb(null, file.fieldname)
     }
 })
@@ -20,7 +21,7 @@ module.exports.id = async (req, res, next) => {
     try {
         const product = await productModel.findById(req.params.id)
         res.render("product" , {
-            product : isAuthent
+            
         })
     }
     catch (err) {
