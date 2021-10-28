@@ -77,12 +77,6 @@ export default function ProductForm() {
                             <input type="upload" name="image" className="input" value={image}
                                 placeholder="Upload files..." onChange={handleImage} />
 
-<<<<<<< HEAD
-                            <p className="text-form">Enter your infos</p>
-
-                            <input type="text" name="infos" className="input" value={infos}
-                                placeholder="Infos..." onChange={handleInfos} />
-=======
 
                             <label htmlFor="cities" className="input title">Select your city
                                 <select name="cities" className="input">
@@ -91,7 +85,6 @@ export default function ProductForm() {
                                     <option value="Marseille">Marseille</option>
                                 </select>
                             </label>
->>>>>>> 4c4b9153cda040caa770a7a1f74da8c22ff9fef0
 
                             <input className="product-submit" type="submit" value="Submit product" />
                         </div>

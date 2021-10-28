@@ -2,7 +2,7 @@ import './App.css';
 import React from 'react'
 import Home from './views/Home';
 import UserRegister from './views/UserRegister';
-import { BrowserRouter as Router, Switch, Link, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import User from './views/User';
 import ProductsList from './views/ProductsList';
 import Search from './views/Search';
