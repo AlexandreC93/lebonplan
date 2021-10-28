@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const cors = require('cors');
+const mongoose = require('mongoose')
 const cookieParser =require('cookie-parser')
 const usersRouter = require('./routes/users.routes.js');
 const productRouter = require("./routes/product.routes.js")
@@ -13,6 +14,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', "html");
+
+mongoose.connect('mongodb+srv://manman:trikillers@cluster0.qfdlv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
 
 
 // EN 1er Creation des routes voir la suite dans le dossier routes/fichiers Users.js 
