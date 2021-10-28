@@ -2,10 +2,10 @@ const productModel = require('../models/product.model');
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, '/my/my-uploads')
+        cb(null, '/public/')
     },
     filename: function (req, file, cb) {
-
+        const date = new Date();
         cb(null, file.fieldname + '-' + uniqueSuffix)
     }
 })
