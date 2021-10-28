@@ -28,3 +28,17 @@ module.exports.id = async (req, res, next) => {
         res.status(500).send({ err })
     }
 }
+
+module.exports.admin = async (req, res, next) =>{
+    const {title, price, description, image, infos} = req.body
+    try{
+        const product = await productModel.create([{title, price, description, image, infos}])
+        res.status(202).json({product})
+        console.log("BODY >>>>>>>", req.body )
+    }
+
+    catch (err){
+        console.error(err)
+        res.status(500).json({err})
+    }
+}
