@@ -11,6 +11,13 @@
   color: white;
 }
 
+#user{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin-bottom: 320px;
+}
+
 a{
   margin: 20px;
 }

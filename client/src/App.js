@@ -19,7 +19,7 @@ function App() {
 
       <Switch>
         <Route exact path="/"> <Home /> </Route>
-        <Route exact path="/users"> <User /> </Route>
+        <Route exact path="/user"> <User /> </Route>
         <Route path="/users/register"> <UserRegister /> </Route>
         <Route exact path="/product"> <ProductsList/> </Route>
         <Route path="/search"> <Search/> </Route>

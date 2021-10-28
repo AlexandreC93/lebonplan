@@ -46,34 +46,34 @@ export default function UserRegister(props) {
     return (
         <>
             <NavBar />
-        <div id="user-register">
-            <h1 className="register-title">User Register</h1>
+            <div id="user-register">
+                <h1 className="register-title">User Register</h1>
 
-            <Form register={true}
+                <Form register={true}
 
-                firstName={firstName} handleFirst={handleFirst}
-                lastName={lastName} handleLast={handleLast}
-                email={email} handleEmail={handleEmail}
-                password={password} handlePassword={handlePassword}
-                surname={surname} handleSurname={handleSurname}
+                    firstName={firstName} handleFirst={handleFirst}
+                    lastName={lastName} handleLast={handleLast}
+                    email={email} handleEmail={handleEmail}
+                    password={password} handlePassword={handlePassword}
+                    surname={surname} handleSurname={handleSurname}
 
-                fetch={(e) => {
-                    e.preventDefault();
+                    fetch={(e) => {
+                        e.preventDefault();
 
-                    fetch("http://localhost:4000/users/register", requestOptions)
-                        .then(res => {
-                            console.log(res);
-                            res.json()
-                            console.log(firstName);
-                            History.push('/')
-                        })
-
-                        
+                        fetch("http://localhost:4000/users/register", requestOptions)
+                            .then(res => {
+                                console.log(res);
+                                res.json()
+                                console.log(firstName);
+                                History.push('/')
+                            })
 
 
-                }} />
-        </div>
-                <Footer/>
+
+
+                    }} />
+            </div>
+            <Footer />
         </>
     )
 }

@@ -18,6 +18,11 @@ export default function NavBar() {
                         <h3> Product</h3>
                     </a>
                 </Link>
+                <Link to="/user">
+                    <a href="">
+                        <h3> Profil </h3>
+                    </a>
+                </Link>
                 <Link to="/users/register">
                     <a href="">
                         <h3> Register</h3>

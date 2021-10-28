@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Footer from '../components/Footer'
+import History from '../components/History'
 import NavBar from '../components/NavBar'
 
 export default function ProductForm() {
@@ -53,6 +54,8 @@ export default function ProductForm() {
                             .then(res => {
                                 console.log(res);
                                 res.json()
+                                History.push('/')
+
                             })
                     }}>
                         <div id='input-form'>
@@ -80,10 +83,10 @@ export default function ProductForm() {
                             </label>
 
                             <label htmlFor="cities" className="input title">Select your city
-                                <select name="cities" className="input">
-                                    <option value="Paris">Paris</option>
-                                    <option value="Lyon">Lyon</option>
-                                    <option value="Marseille">Marseille</option>
+                                <select value={cities} className="input" onChange={handleCities}>
+                                    <option name="cities" value={cities}>Paris</option>
+                                    <option name="cities" value={cities}>Lyon</option>
+                                    <option name="cities" value={cities}>Marseille</option>
                                 </select>
                             </label>
 
