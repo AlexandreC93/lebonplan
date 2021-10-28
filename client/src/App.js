@@ -2,16 +2,18 @@ import './App.css';
 import React from 'react'
 import Home from './views/Home';
 import UserRegister from './views/UserRegister';
-import { BrowserRouter as Router, Switch, Link, Route } from 'react-router-dom'
+import { BrowserRouter, Router, Switch, Link, Route } from 'react-router-dom'
 import User from './views/User';
 import ProductsList from './views/ProductsList';
 import Search from './views/Search';
 import ProductForm from './views/ProductForm';
 import Error from './views/Error';
+import History from './components/History';
 
 function App() {
   return (
-    <Router>
+    
+    <Router history={History}>
       <div className="App">
       </div>
 

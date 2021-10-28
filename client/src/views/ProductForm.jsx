@@ -57,26 +57,27 @@ export default function ProductForm() {
                     }}>
                         <div id='input-form'>
 
-                            <p className="text-form">Enter the product title</p>
+                            <label htmlFor="title" className="text-form">Enter the product title
 
-                            <input type="text" name="title" className="input" value={title}
-                                placeholder="Product title..." onChange={handleTitle} />
+                                <input type="text" name="title" className="input" value={title}
+                                    placeholder="Product title..." onChange={handleTitle} />
+                            </label>
 
-                            <p className="text-form">Enter your price</p>
+                            <label htmlFor="price" className="text-form">Enter your price
 
-                            <input type="number" name="price" className="input" value={price}
-                                placeholder="Price..." onChange={handlePrice} />
+                                <input type="number" name="price" className="input" value={price}
+                                    placeholder="Price..." onChange={handlePrice} />
+                            </label>
+                            <label htmlFor="description" className="text-form">Enter a description
 
-                            <p className="text-form">Enter a description</p>
+                                <input type="text" name="description" className="input" value={description}
+                                    placeholder="Description..." onChange={handleDescri} />
+                            </label>
+                            <label htmlFor="image" className="text-form">Upload images
 
-                            <input type="text" name="description" className="input" value={description}
-                                placeholder="Description..." onChange={handleDescri} />
-
-                            <p className="text-form">Upload images</p>
-
-                            <input type="upload" name="image" className="input" value={image}
-                                placeholder="Upload files..." onChange={handleImage} />
-
+                                <input type="upload" name="image" className="input" value={image}
+                                    placeholder="Upload files..." onChange={handleImage} />
+                            </label>
 
                             <label htmlFor="cities" className="input title">Select your city
                                 <select name="cities" className="input">
