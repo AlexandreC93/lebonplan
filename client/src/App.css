@@ -11,6 +11,10 @@
   color: white;
 }
 
+a{
+  margin: 20px;
+}
+
 body{
   background-color: black;
 }
@@ -44,11 +48,11 @@ body{
 
 
 nav{
-  height: 50px;;
-  background: rgb(128, 27, 141);
+  height: 50px;
+  background: linear-gradient(#e664e0, #9198e5);
   display:flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 .img{
@@ -57,7 +61,8 @@ nav{
 }
 
 button{
-  background-color:rgb(128, 27, 141);
+  background: linear-gradient(#e664e0, #9198e5);
+
   text-align: start;
 }
 
@@ -88,4 +93,67 @@ stroke: white;
 
 path:hover{
   fill: lightgray;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+  transition: 0.3s;
+}
+
+a:hover{
+  color: white;
+  transition: 0.3s;
+}
+
+#product{
+  margin-top: 30px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  border: solid white 5px;
+  width: 70vw;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+
+#product:hover{
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+.title-product{
+  color: white;
+}
+
+.price{
+  color: white;
+}
+
+.descri-product{
+  color: white;
+}
+
+#infos:hover{
+ 
+}
+
+#products-list{
+  margin-top: 30px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-error{
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+#error{
+  padding-top: 300px;
+
 }
