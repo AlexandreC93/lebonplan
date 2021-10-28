@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import NavBar from './NavBar'
+import Footer from '../components/Footer'
+import NavBar from '../components/NavBar'
 
 export default function ProductForm() {
 
@@ -41,8 +42,10 @@ export default function ProductForm() {
     }
 
     return (
-        <div id="product-form">
+        <>
             <NavBar/>
+            <div id="content">
+        <div id="product-form">
 
             <form onSubmit={(e) => {
                 e.preventDefault()
@@ -54,24 +57,38 @@ export default function ProductForm() {
             }}>
                 <div id='input-form'>
 
+<p className="text-form">Enter the product title</p>
+
                     <input type="text" name="title" className="input" value={title}
                         placeholder="Product title..." onChange={handleTitle}  />
 
+<p className="text-form">Enter your price</p>
+
                     <input type="number" name="price" className="input" value={price}
                         placeholder="Price..." onChange={handlePrice} />
-                        
+
+<p className="text-form">Enter a description</p>
+
                     <input type="text" name="description" className="input" value={description}
                         placeholder="Description..." onChange={handleDescri} />
+
+<p className="text-form">Upload images</p>
 
                     <input type="upload" name="image" className="input" value={image}
                         placeholder="Upload files..." onChange={handleImage} />
 
+<p className="text-form">Enter your infos</p>
+
+
                     <input type="text" name="infos" className="input" value={infos}
                         placeholder="Infos..." onChange={handleInfos} />
 
-                    <input type="submit" value="Submit product" />
+                    <input className="product-submit" type="submit" value="Submit product" />
                 </div>
             </form>
         </div>
+        </div>
+        <Footer/>
+        </>
     )
 }
