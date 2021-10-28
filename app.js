@@ -1,6 +1,7 @@
 const express = require('express');
 const path = require('path');
 const cors = require('cors');
+const cookieParser =require('cookie-parser')
 const usersRouter = require('./routes/users.routes.js');
 const productRouter = require("./routes/product.routes.js")
 const indexRouter = require('./routes/index.routes')
@@ -40,9 +41,9 @@ app.use(function (err, req, res, next) {
 
 
 // Lancer le serveur sur localhost 4000
-// app.listen(4000, () => {
-//   console.log("Listening on port" + 4000 );
-// })
+app.listen(4000, () => {
+  console.log("Listening on port" + 4000 );
+})
 
 
 module.exports = app;

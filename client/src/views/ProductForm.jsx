@@ -8,7 +8,7 @@ export default function ProductForm() {
     const [price, setPrice] = useState(0)
     const [description, setDescri] = useState("")
     const [image, setImage] = useState("")
-    const [infos, setInfos] = useState("")
+    const [cities, setCities] = useState("")
 
     const handleTitle = (e) => {
         setTitle(e.target.value)
@@ -22,8 +22,8 @@ export default function ProductForm() {
     const handleImage = (e) => {
         setImage(e.target.value)
     }
-    const handleInfos = (e) => {
-        setInfos(e.target.value)
+    const handleCities = (e) => {
+        setCities(e.target.value)
     }
 
 
@@ -37,7 +37,7 @@ export default function ProductForm() {
             price,
             description,
             image,
-            infos
+            cities
         })
     }
 
@@ -77,10 +77,21 @@ export default function ProductForm() {
                             <input type="upload" name="image" className="input" value={image}
                                 placeholder="Upload files..." onChange={handleImage} />
 
+<<<<<<< HEAD
                             <p className="text-form">Enter your infos</p>
 
                             <input type="text" name="infos" className="input" value={infos}
                                 placeholder="Infos..." onChange={handleInfos} />
+=======
+
+                            <label htmlFor="cities" className="input title">Select your city
+                                <select name="cities" className="input">
+                                    <option value="Paris">Paris</option>
+                                    <option value="Lyon">Lyon</option>
+                                    <option value="Marseille">Marseille</option>
+                                </select>
+                            </label>
+>>>>>>> 4c4b9153cda040caa770a7a1f74da8c22ff9fef0
 
                             <input className="product-submit" type="submit" value="Submit product" />
                         </div>
