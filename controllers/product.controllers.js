@@ -19,7 +19,7 @@ const upload = multer({ storage: storage })
 
 module.exports.id = async (req, res, next) => {
     try {
-        const product = await productModel.findById(req.params.id)
+        const product = await productModel.findById(req.params.id).lean()
         res.render("product" , {
             
         })
@@ -39,7 +39,7 @@ module.exports.admin = async (req, res, next) =>{
     }
 
     catch (err){
-        console.error(err)
+        // console.error(err)
         res.status(500).json({err})
     }
 }
