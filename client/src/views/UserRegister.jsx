@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import Footer from '../components/Footer'
 import Form from '../components/Form'
+import History from '../components/History'
 import NavBar from '../components/NavBar'
 
-export default function UserRegister() {
+export default function UserRegister(props) {
     // const [data, setData] = useState([])
     const [firstName, setFirstName] = useState("")
     const [lastName, setLastName] = useState("")
@@ -41,7 +42,7 @@ export default function UserRegister() {
         })
     }
 
-    console.log(firstName);
+    console.log(props.history);
     return (
         <>
             <NavBar />
@@ -64,7 +65,10 @@ export default function UserRegister() {
                             console.log(res);
                             res.json()
                             console.log(firstName);
+                            History.push('/')
                         })
+
+                        
 
 
                 }} />

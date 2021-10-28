@@ -29,7 +29,7 @@ body{
 #input-form{
   display: flex;
   flex-flow: column;
-  align-items: center;
+  align-items: flex-start;
 }
 
 #content{
@@ -40,12 +40,14 @@ body{
 #product-form{
   display: flex;
   flex-flow: column;
-  align-items: center;
+  justify-content: space-around;
   border: solid 5px white;
   border-radius: 20px;
   width: 70vw;
   height: 73vh;
   margin-top: 30px;
+  padding-left: 200px;
+
 }
 
 .input{
@@ -103,9 +105,10 @@ button{
 }
 
 path{
-  fill: rgb(128, 27, 141);
-stroke: white;
+  fill: rgb(206, 7, 196 );
+  stroke: rgb(255, 255, 255);
 }
+
 
 path:hover{
   fill: lightgray;

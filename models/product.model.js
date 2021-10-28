@@ -14,13 +14,12 @@ const productSchema = new Schema({
   },
   cities: {
     type: String,
-    enum: ['paris', 'lyon', 'marseille'],
-    required: true,
+    enum: ["Paris", "Lyon", "Marseille", ''],
+    default: 'Paris'
   },
-  pictureUrl: {
+  image: {
     type: String
   },
-  date: Date,
   description: String,
   info: String
 });
