@@ -6,6 +6,7 @@ const cookieParser =require('cookie-parser')
 const usersRouter = require('./routes/users.routes.js');
 const productRouter = require("./routes/product.routes.js")
 const indexRouter = require('./routes/index.routes')
+const env = require('./config/.env')
 const app = express();
 app.use(cookieParser());
 app.use(cors())
@@ -15,8 +16,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', "html");
 
-mongoose.connect('mongodb+srv://manman:trikillers@cluster0.qfdlv.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
-
+env.connect
 
 // EN 1er Creation des routes voir la suite dans le dossier routes/fichiers Users.js 
 app.use('/product', productRouter);
