@@ -6,6 +6,7 @@ const productController = require('../controllers/product.controllers');
 
 router.get('/:id' , productController.id)
 router.get('/cities/city', productController.city)
+router.get('/admin', productController.admin)
 
 
 

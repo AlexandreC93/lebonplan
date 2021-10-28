@@ -22,7 +22,7 @@ export default function Footer() {
                     <li className="btn-foo">Donate</li>
                 </a>
                 <a href="" className="link-foo">
-                    <li className="btn-foo">We are evrywhere</li>
+                    <li className="btn-foo">We are everywhere</li>
                 </a>
                 <a href="" className="link-foo">
                     <li className="btn-foo">Social Media</li>

@@ -105,9 +105,10 @@ button{
 }
 
 path{
-  fill: rgb(128, 27, 141);
-stroke: white;
+  fill: rgb(206, 7, 196 );
+  stroke: rgb(255, 255, 255);
 }
+
 
 path:hover{
   fill: lightgray;
