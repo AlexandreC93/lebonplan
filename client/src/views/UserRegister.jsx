@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Footer from '../components/Footer'
 import Form from '../components/Form'
 import NavBar from '../components/NavBar'
 
@@ -32,19 +33,20 @@ export default function UserRegister() {
             'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-            firstName: firstName,
-            lastName: lastName,
-            surname: surname,
-            email: email,
-            password: password
+            firstName,
+            lastName,
+            surname,
+            email,
+            password
         })
     }
 
     console.log(firstName);
     return (
-        <div id="user">
+        <>
             <NavBar />
-            <h1>User Register</h1>
+        <div id="user-register">
+            <h1 className="register-title">User Register</h1>
 
             <Form register={true}
 
@@ -67,5 +69,7 @@ export default function UserRegister() {
 
                 }} />
         </div>
+                <Footer/>
+        </>
     )
 }

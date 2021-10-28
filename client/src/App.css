@@ -11,8 +11,19 @@
   color: white;
 }
 
+a{
+  margin: 20px;
+}
+
 body{
+  margin: 0px;
+  padding:0px;
   background-color: black;
+}
+
+::selection{
+  background-color: purple;
+  color: white;
 }
 
 #input-form{
@@ -21,9 +32,20 @@ body{
   align-items: center;
 }
 
+#content{
+  display: flex;
+  justify-content: center;
+}
+
 #product-form{
   display: flex;
   flex-flow: column;
+  align-items: center;
+  border: solid 5px white;
+  border-radius: 20px;
+  width: 70vw;
+  height: 73vh;
+  margin-top: 30px;
 }
 
 .input{
@@ -44,17 +66,18 @@ body{
 
 
 nav{
-  height: 50px;;
-  background: rgb(128, 27, 141);
+  height: 50px;
+  background: linear-gradient(#e664e0, #9198e5);
   display:flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 
 
 button{
-  background-color:rgb(128, 27, 141);
+  background: linear-gradient(#e664e0, #9198e5);
+
   text-align: start;
   height: 20px;
 }
@@ -86,4 +109,129 @@ stroke: white;
 
 path:hover{
   fill: lightgray;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+  transition: 0.3s;
+}
+
+a:hover{
+  color: white;
+  transition: 0.3s;
+}
+
+#product{
+  margin-top: 30px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  border: solid white 5px;
+  width: 70vw;
+  border-radius: 20px;
+  transition: 0.5s;
+  text-align: center;
+}
+
+#product:hover{
+  transform: scale(1.1);
+  transition: 0.5s;
+}
+
+.title-product{
+  color: white;
+}
+
+.price{
+  color: white;
+}
+
+.descri-product{
+  color: white;
+}
+
+
+#products-list{
+  margin-top: 30px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-error{
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+#error{
+  padding-top: 300px;
+
+}
+
+.register-title{
+  color: white;
+}
+
+#user-register{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.text-form{
+  color: white;
+}
+
+#footer{
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  background: linear-gradient(#e664e0, #9198e5);
+  height: 28vh;
+  margin-top: 60px;
+}
+
+.btn-foo{
+  list-style: none;
+}
+
+.link-foo{
+  text-decoration: none;
+}
+
+#form-register{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  border: solid 5px white;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.login-title{
+  color: white;
+}
+
+.product-submit{
+  height: 5vh;
+  width: 15vw;
+  border: white solid 3px;
+  border-radius: 20px;
+  background-color: black;
+  color: white;
+  transition: 0.4s;
+  margin: 20px;
+
+}
+
+.product-submit:hover{
+  color: black;
+  background-color: white;
+  transition: 0.4s;
+  cursor:pointer;
 }

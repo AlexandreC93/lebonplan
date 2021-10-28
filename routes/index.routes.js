@@ -9,4 +9,8 @@ router.post('/get',(req,res,next)=>{
 
 })
 
+router.get('/error', (req,res, next)=>{
+    res.json({error: "error"})
+})
+
 module.exports = router

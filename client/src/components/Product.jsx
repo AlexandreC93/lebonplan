@@ -1,17 +1,19 @@
 import React from 'react'
 
-export default function Product() {
+export default function Product({image, alt}) {
     return (
+        <>
         <div id="product">
+            <img src={image} alt={alt} />
 
-            <img src="" alt="" />
             <div id="info">
-                <h2 style={{color: "white"}}>Product name</h2>
-                <span className="price"style={{color: "white"}}>Price</span>
+                <h2 className="title-product" >Product name</h2>
+                <span className="price" className="price">Price €</span>
                 {/*user*/}
                 {/*info*/}
-                <p style={{color: "white"}}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga ipsum expedita recusandae facilis ad. Dolorem ipsa excepturi rem tenetur deserunt?</p>
+                <p className="descri-product">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga ipsum expedita recusandae facilis ad. Dolorem ipsa excepturi rem tenetur deserunt?</p>
             </div>
         </div>
+        </>
     )
 }
